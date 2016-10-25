@@ -41,7 +41,7 @@ def toJS(data, label, file):
         firstseen = dateutil.parser.parse(firstseen)
         current = current + 1
         year = firstseen.year
-        month = firstseen.month
+        month = firstseen.month - 1
         day = firstseen.day
         file.write("{x: new Date(" + str(year) + "," + str(month) +
                     "," + str(day) + "), y: " + str(current) + "},\n")
