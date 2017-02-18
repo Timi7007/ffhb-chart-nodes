@@ -2,10 +2,10 @@
 import json
 import dateutil.parser
 import urllib2
-WALLE_LON_MIN = 8.757305145263672
-WALLE_LON_MAX = 8.796873092651367
-WALLE_LAT_MIN = 53.087546501208976
-WALLE_LAT_MAX = 53.108470468690165
+WALLE_LON_MIN = 8.631391525
+WALLE_LON_MAX = 8.664050102
+WALLE_LAT_MIN = 53.347861457
+WALLE_LAT_MAX = 53.363921254
 f = urllib2.urlopen(
     "https://downloads.bremen.freifunk.net/data/nodes.json")
 js = open("data.js", 'w')

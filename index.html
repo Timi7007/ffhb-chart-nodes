@@ -2,7 +2,7 @@
 <html>
 <head>  
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>Freifunk Bremen - Projekt Walle: Wachstum</title>
+	<title>Freifunk Bremen - Projekt Hagen-Cux: Wachstum</title>
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
 	<link rel="icon" href="img/favicon.ico" type="image/x-icon" />
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
@@ -20,6 +20,7 @@
 						valueFormatString: "DD MMM YYYY",
 						interval: 1,
 						intervalType: "month",
+						minimum: new Date(2016,7,1)
 					},
 
 					data: [
@@ -37,7 +38,7 @@
 				{
 					culture:  "de",
 					title:{
-						text: "Anzahl von Routern in Walle"
+						text: "Anzahl von Routern in Hagen Cux"
 					},
 					axisX:{  
 						valueFormatString: "DD MMM YYYY",
@@ -53,28 +54,9 @@
 					}    
 					]
 				});
-				chart.render();
+
 				document.getElementById("clientsWALLE").innerHTML = "Aktuelle Clientanzahl in Walle: "+clientsWALLE
-				var chart = new CanvasJS.Chart("chartContainerWALLEMai2016",
-				{
-					culture:  "de",
-					title:{
-						text: "Anzahl von Routern in Walle ab Mai 2016"
-					},
-					axisX:{
-						valueFormatString: "DD MMM YYYY",
-						interval: 1,
-						intervalType: "month",
-						minimum: new Date(2016,4,1)
-					},
-					data: [
-					{
-						type: "line",
-						lineThickness: 2,
-						dataPoints: WALLE
-					}
-					]
-				});
+
 				chart.render();
 			} catch(err){
 				alert('Bitte als erstes "python parse.py" ausführen.')
@@ -90,9 +72,7 @@
 	<hr>
 	<div id="chartContainerWALLE" style="height: 300px; width: 100%;">
 	</div>
-	<p id="clientsWALLE">Aktuelle Clientanzahl in Walle: </p>
-	<hr>
-	<div id="chartContainerWALLEMai2016" style="height: 300px; width: 100%;">
+	<p id="clientsWALLE">Aktuelle Clientanzahl in Hagen: </p>
 	</div>
 </body>
 </html>
