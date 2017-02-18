@@ -34,7 +34,7 @@
 				chart.render();
 				document.getElementById("clients").innerHTML = "Aktuelle Clientanzahl im FFHB: "+clients
 
-				var chart = new CanvasJS.Chart("chartContainerWALLE",
+				var chart = new CanvasJS.Chart("chartContainerHAGEN",
 				{
 					culture:  "de",
 					title:{
@@ -50,12 +50,12 @@
 					{        
 						type: "line",
 						lineThickness: 2,
-						dataPoints: WALLE
+						dataPoints: HAGEN
 					}    
 					]
 				});
 
-				document.getElementById("clientsWALLE").innerHTML = "Aktuelle Clientanzahl in Walle: "+clientsWALLE
+				document.getElementById("clientsHAGEN").innerHTML = "Aktuelle Clientanzahl in Hagen: "+clientsHAGEN
 
 				chart.render();
 			} catch(err){
@@ -70,9 +70,9 @@
 	</div>
 	<p id="clients">Aktuelle Clientanzahl im FFHB: </p>
 	<hr>
-	<div id="chartContainerWALLE" style="height: 300px; width: 100%;">
+	<div id="chartContainerHAGEN" style="height: 300px; width: 100%;">
 	</div>
-	<p id="clientsWALLE">Aktuelle Clientanzahl in Hagen: </p>
+	<p id="clientsHAGEN">Aktuelle Clientanzahl in Hagen: </p>
 	</div>
 </body>
 </html>
